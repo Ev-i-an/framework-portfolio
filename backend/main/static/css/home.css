@@ -54,8 +54,18 @@
   }
   
   /* Responsive design */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .tags-list {
       flex-direction: column;
+    }
+  } */
+  @media (max-width: 768px) {
+    .tags-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .tag {
+      height: 10vh;
     }
   }

@@ -6,10 +6,13 @@
 {% endblock %}
 {% block extrahead %}
   <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/aptitude.css' %}" />
 {% endblock %}
 
+
 {% block content %}
-  <div class="filters">
+  {% include 'aptitude.html' %}
+  <div class="filters" id="work">
     <input type="text" id="name-search" placeholder="Search by name..." />
     <div class="tags-list">
       {% for tag in tags %}
