@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /chemin/vers/votre-page-admin

@@ -1,0 +1,44 @@
+
+{% load static %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+{% endblock %}
+
+<footer class="footer" id="footer">
+    <div class="footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">Evan</h1>
+                <span class="footer__subtitle" color:#fff>Etudient en developpement web</span>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#services" class="footer__link">Conception du site</a>
+                </li>
+                <li>
+                    <a href="#work" class="footer__link">Projets</a>
+                </li>
+                <li>
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+                <li>
+                    <a href="../frontend/mentions.html" class="footer__link">Mentions Légales</a>
+                </li>
+            </ul>
+            <div class="footer__socials">
+                <a href="https://discord.com/" target="_blank" class="footer__social">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://github.com/Ev-i-an" target="_blank" class="footer__social">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/evan-m-721248300/" target="_blank" class="footer__social" aria-label="lien vers mon linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <!-- <p class="footer__copy">&#169; Crypticalcoder, All right reserved</p> -->
+    </div>
+</footer>

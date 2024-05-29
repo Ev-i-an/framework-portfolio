@@ -1,23 +1,26 @@
 
-    <section class="skills section" id="skills">
-        <div class="inner">
-            <div class="skills__container"> 
-                {% if aptitudes %}
-                    {% for aptitude in aptitudes %}
-                        <div class="skill-box">
-                            <div class="skill-title">
+<section class="skills section" id="skills">
+    <h2 data-heading="Mes" class="section__title">Aptitudes</h2>
+    <div class="inner">
+        <div class="skills__container"> 
+            {% if aptitudes %}
+                {% for aptitude in aptitudes %}
+                    <div class="skill-box">
+                        <div class="skill-title">
+                            {% for aptitude in aptitude.images.all %}
                                 <div class="img">
                                     <img src="{{ aptitude.image.url }}" alt="Aptitude image" class="skill-icon"/>
                                 </div>
-                                <h3>{{ aptitude.title }}</h3>
-                            </div>
+                            {% endfor %}
+                          <h3>{{ aptitude.title }}</h3>
                         </div>
-                    {% endfor %}
-                {% else %}
-                    <div class="col-md-12">
-                        <p>No items Available</p>
                     </div>
-                {% endif %}
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>No items Available</p>
+                </div>
+            {% endif %}
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga consectetur similique suscipit cupiditate, ab pariatur accusantium eos? Quaerat magnam temporibus, harum quasi illum pariatur. Inventore recusandae voluptate quam maiores consectetur.</p>
-    </section>
+    </div>
+</section>
