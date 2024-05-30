@@ -1,0 +1,141 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to { 
+        transform: rotate(360deg);
+    }
+}
+ 
+
+ @-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.load {
+    width: 100px;
+    height: 100px;
+    margin: 110px auto 0;
+    border:solid 10px #8822aa;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+     -webkit-transition: all 0.5s ease-in;
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         1.0s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+        
+         transition: all 0.5s ease-in;
+    animation-name:             rotate; 
+    animation-duration:         1.0s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function: linear; 
+}
+
+.secton__aiblog {
+    border: 1px solid burlywood;
+}
+
+.generate__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+    
+}
+
+.generate__section .input_blog {
+    margin-top: 2rem;
+    width: 64%;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: .6rem 1.2rem;
+    color: rgb(243, 161, 55);
+    font-weight: 1rem;
+    font-size: var(--normal-font-size);
+    letter-spacing: .5px;
+    outline: none;
+    border-radius: .50rem;
+    transition: .3s;
+}
+
+/* .generate__section .button {
+    background-color: rgba(255, 255, 255, 0.463); 
+    backdrop-filter: blur(11px);
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 45%;
+    transition: all 1s ease-out;
+}
+
+.generate__section .button:hover {
+    background-color: rgb(255, 255, 255); 
+    backdrop-filter: blur(11px);
+    color: rgb(0, 0, 0);
+    transition: all 1s ease-out;
+    transform: scale(1.2);
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    
+} */
+
+.button {
+    color: #000000;
+    background-color: transparent;
+    transition: all 0.5s;
+    position: relative; 
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+  }
+  .button span {
+    z-index: 2; 
+    display: block;
+    width: 100%;
+    height: 100%; 
+  }
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .button:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .button:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  

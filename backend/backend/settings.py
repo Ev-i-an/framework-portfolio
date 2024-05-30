@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'tailwind',
     'theme',
-    'main'
+    'main',
+    'blog_generator'
 ]
 
 TAILWIND_APP_NAME = 'theme'

@@ -1,9 +1,46 @@
-{% extends 'base.html' %}
+
 {% load static %}
 
-{% block title %}
-  Ai Blog
-{% endblock %}
 {% block extrahead %}
   <link rel="stylesheet" href="{% static 'css/secblog.css' %}" />
+{% endblock %}
+
+<section class="section__aiblog" id="aiblog">
+    <div class="blog__container">
+
+        <!-- Introduction section -->
+        <div class="text-center">
+            <h2 class="section__title">Welcome to the AI Blog Generator</h2>
+            <p>
+                Generate high-quality blog articles from YouTube videos using artificial intelligence.
+                Simply enter the link to the YouTube video below and let the AI create the content for you!
+            </p>
+        </div>
+
+        <br>
+
+        <!-- Youtube section -->
+        <div>
+            <h2 class="section__title">Enter Youtube Video Link</h2>
+            <div class="generate__section">
+                <input id="youtubeLink" type="url" placeholder="Paste Youtube Link..." class="input_blog">
+                <button id="generateBlogButton" class="button"><span>Générer</span></button>
+            </div>
+        </div>
+
+
+        <!-- section for loading circle -->
+        <div style="display: none;" id="loading-circle" class="load"></div>
+
+
+        <!-- Generated Blog Display Section -->
+        <section class="display__blog">
+            <h2 class="section__title">Generated Blog Article</h2>
+            <div id="blogContent" class="mt-2 text-gray-700 space-y-4">         
+            </div>
+        </section>
+    </div>
+</section>
+{% block extra_js %}
+  <script src="{% static 'js/secblog.js' %}"></script>
 {% endblock %}

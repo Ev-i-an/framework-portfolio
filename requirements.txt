@@ -9,3 +9,6 @@ sqlparse
 Mysqlclient 
 python-dotenv
 Pillow
+assemblyai
+pytube
+openai

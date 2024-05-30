@@ -16,10 +16,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .tag {
-  background-color: #007bff;
+  background-color: rgba(241, 160, 54, 0.605);
   color: white;
   border: none;
   padding: 5px 10px;
@@ -29,7 +31,7 @@
 }
 
 .tag:hover {
-  background-color: #0056b3;
+  background-color: rgb(243, 161, 55);
 }
 
 /* Projects list */

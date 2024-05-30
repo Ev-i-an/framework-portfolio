@@ -29,9 +29,21 @@ a:hover {
   transition: .5s;
 }
 
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+
 body h2.section__title {
   color: #fff;
   text-align: center;
+  font-size: 2.3rem;
 }
 
 /* Header and Navigation Menu */
@@ -48,6 +60,40 @@ body h2.section__title {
   width: 100vw;
   border-bottom: 1px solid rgba(255, 255, 255, .1);
   z-index: 1000;
+  animation: byTop 3s ease both;
+}
+
+@-moz-keyframes byTop {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes byTop {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-o-keyframes byTop {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes byTop {
+  0% {
+    transform: translateY(-150%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .navbar span{
@@ -56,7 +102,7 @@ body h2.section__title {
   height: 2px;
   width: 50px;
   background: linear-gradient(90deg , transparent , #fff);
-  animation: animate 5s infinite linear;
+  animation: animate 10s infinite linear;
 }
 
 

@@ -1,4 +1,5 @@
 {% load static %}
+{% static 'images/logo_blanc.png' %}
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,6 +10,8 @@
     <meta name="description" content="Mon site personnel">
     <title>{% block title %}Portfolio - Home{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- <link rel="shortcut icon" href="backend/main/static/images/logo_blanc.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Major+Mono+Display&display=swap" rel="stylesheet">
@@ -22,7 +25,7 @@
             <span></span>
             <div class="logo">eraf</div>
             <ul class="menu">
-                <li><a href="/home">accueil</a></li>
+                <li><a href="/">accueil</a></li>
                 <li><a href="/aiblog">aiblog</a></li>
                 <li><a href="#skills">works</a></li>
                 <li><a href="#work">casting</a></li>
@@ -34,19 +37,21 @@
         <label for="menu-icon"></label>
         <nav class="nav"> 		
             <ul class="pt-5">
-                <li><a href="/home">Accueil</a></li>
+                <li><a href="/">Accueil</a></li>
                 <li><a href="#about">À Propos</a></li>
                 <li><a href="#skills">Aptitudes</a></li>
                 <li><a href="#work">Projets</a></li>
-                <li><a href="#services">Protfolio</a></li>
-                <li><a href="#aiblog">Ai Blog</a></li>
+                <li><a href="#services">Portfolio</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
         </nav> 
     </header>
     <main>
         {% include 'background.html' %}
+        {% include 'landing-page.html' %}
         {% block content %}
         {% endblock content %}
+        {% include 'secblog.html' %}
     </main>
     <footer>
         {% include 'footer.html' %}
