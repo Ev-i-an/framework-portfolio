@@ -11,15 +11,15 @@
 
 .text h2 {
     position: relative;
-    color: #ffeb3b;
+    color: #e3d18a;
     font-weight: 600;
     font-size: 30vw;
     -webkit-box-reflect: below -129px linear-gradient(transparent, #0000);
-    text-shadow: 0 0 10px #ffeb3b,
-                 0 0 40px #ffeb3b,
-                 0 0 80px #ffeb3b,
-                 0 0 160px #ffeb3b,
-                 0 0 240px #ffeb3b;
+    text-shadow: 0 0 10px #e3d18a,
+                 0 0 40px #e3d18a,
+                 0 0 80px #e3d18a,
+                 0 0 160px #e3d18a,
+                 0 0 240px #00ffd6;
 }
 
 svg {

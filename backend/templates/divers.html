@@ -1,0 +1,27 @@
+{% load static %}
+
+<section class="section__about" id="about">
+    <ul id="categories" class="clr">
+        <li class="pusher"></li>
+        {% if abouts %}
+        {% for concept in concepts %}
+            <li>
+                <div>
+                {% for image in concept.images.all %}
+                    <img src="{{ image.image.url }}" alt=""/>
+                {% endfor %}
+                <h1>{{ concept.title }}</h1>
+                <p>Some sample text about the article this hexagon leads to</p>
+                {% for pdf in about.pdfs.all %}
+                    <a class="projet__title" href="{% url 'pdf_divers' pdf.id %}">Voir PDF</a>
+                {% endfor %}
+                </div>
+            </li>
+        {% endfor %}
+        {% else %}
+            <div class="col-md-12">
+                <p>No items Available</p>
+            </div>
+        {% endif %}
+    </ul>
+</section>

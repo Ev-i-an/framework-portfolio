@@ -27,6 +27,12 @@ class ProjectImage(models.Model):
     def __str__(self):
         return f"{self.project.title} Image"
 
+
+
+
+
+
+
 class Concept(models.Model):
     title = models.CharField(max_length=200)
     link = models.URLField(max_length=200, blank=True)
@@ -42,7 +48,52 @@ class ConceptImage(models.Model):
 
     def __str__(self):
         return f"{self.concept.title} Image"
+
+class SecondPdf(models.Model):
+    conceptpdf = models.ForeignKey(
+        Concept, related_name="pdfs", on_delete=models.CASCADE
+    )
+    pdf = models.FileField(upload_to='pdfs/') 
+
+    def __str__(self):
+        return f"PDF lié à : {self.conceptpdf.title}"
+
+
+
+
+class About(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    link = models.URLField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.title
+
+class AboutImage(models.Model):
+    about = models.ForeignKey(
+        About, related_name="images", on_delete=models.CASCADE
+    )
+    image = models.ImageField(upload_to="about_images/")
+
+    def __str__(self):
+        return f"{self.about.title} Image"
     
+class MonPDF(models.Model):
+    aboutpdf = models.ForeignKey(
+        About, related_name="pdfs", on_delete=models.CASCADE
+    )
+    pdf = models.FileField(upload_to='pdfs/') 
+
+    def __str__(self):
+        return f"PDF lié à : {self.aboutpdf.title}"   
+
+
+
+
+
+
+
+
 class Aptitude(models.Model):
     title = models.CharField(max_length=200)
 

@@ -25,7 +25,7 @@
       <div class="projects-list">
         {% for project in projects %}
           <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
-            <h3><a href="{% url 'project' project.id %}">{{project.title}}</a></h3>
+            <h3><a class="projet__title" href="{% url 'project' project.id %}">{{project.title}}</a></h3>
             <!-- <img src="{{ project.projectimage_set.first.image.url }}" class="img-project" alt="{{ project.title }} Image"> -->
             <p>{{project.description}}</p>
             <p>Tags: {{project.tags.all|join:', '}}</p>   

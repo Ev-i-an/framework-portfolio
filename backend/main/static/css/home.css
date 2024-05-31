@@ -10,6 +10,7 @@
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: #ffffff91;
 }
 
 .tags-list {
@@ -22,7 +23,7 @@
 
 .tag {
   background-color: rgba(241, 160, 54, 0.605);
-  color: white;
+  color: #000;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -43,12 +44,17 @@
   gap: 2%;
 }
 
+a.projet__title {
+  color: #6d071a;
+}
+
 .project {
-  background-color: white;
+  background: #ffffff91;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
 }
 
 .project h3 {

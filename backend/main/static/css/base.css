@@ -20,13 +20,14 @@ body {
 a {
   color: #007bff;
   text-decoration: none;
-  transition: .5s;
+  transition: .5s ease;
 }
 
-a:hover {
-  /* text-decoration: underline; */
-  font-size: larger;
-  transition: .5s;
+a.navigation:hover {
+  text-decoration: underline;
+  font-size: 1.6rem;
+  transition: .5s ease;
+  color: white;
 }
 
 button {
@@ -41,9 +42,9 @@ input {
 
 
 body h2.section__title {
-  color: #fff;
+  color: #6d071a;
   text-align: center;
-  font-size: 2.3rem;
+  font-size: 3.5rem;
 }
 
 /* Header and Navigation Menu */
@@ -54,6 +55,7 @@ body h2.section__title {
   justify-content: space-between;
   background-color: #00000056;
   backdrop-filter: blur(12px);
+  font-size: 1.5rem;
   padding: 1rem 3rem;
   position: fixed;
   top: 0;
@@ -129,7 +131,7 @@ li{
 }
 
 a{
-  color: #f58a18;
+  color: #e3d18a;
   text-decoration: none;
 }
 

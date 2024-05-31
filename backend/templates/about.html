@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+<section class="section__about" id="about">
+    <ul id="categories" class="clr">
+        <li class="pusher"></li>
+        {% if abouts %}
+        {% for about in abouts %}
+            <li>
+                <div>
+                {% for image in about.images.all %}
+                    <img src="{{ image.image.url }}" alt=""/>
+                {% endfor %}
+                <h1>{{ about.title }}</h1>
+                <p>{{ about.description }}</p>
+                {% for pdf in about.pdfs.all %}
+                    <a class="projet__title" href="{% url 'venue_pdf' pdf.id %}">Voir PDF</a>
+                {% endfor %}
+                </div>
+            </li>
+        {% endfor %}
+        {% else %}
+            <div class="col-md-12">
+                <p>No items Available</p>
+            </div>
+        {% endif %}
+    </ul>
+</section>

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tag, Project, ProjectImage, Concept, Aptitude, ConceptImage, AptitudeImage
+from .models import Tag, Project, ProjectImage, Concept, Aptitude, ConceptImage, AptitudeImage, About, AboutImage, MonPDF, SecondPdf
 
 # Register your models here.
 
@@ -41,6 +41,11 @@ admin.site.register(ProjectImage)
 admin.site.register(AptitudeImage)
 admin.site.register(ConceptImage)
 admin.site.register(Concept, ConceptAdmin)
+admin.site.register(SecondPdf)
 admin.site.register(Aptitude, AptitudeAdmin)
+admin.site.register(About)
+admin.site.register(AboutImage)
+admin.site.register(MonPDF)
+
 
 

@@ -1,2 +1,3 @@
 backend/theme
 env
+backend/blog_generator/views.py
