@@ -52,11 +52,11 @@ body h2.section__title {
 .navbar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: #00000056;
   backdrop-filter: blur(12px);
   font-size: 1.5rem;
-  padding: 1rem 3rem;
+  padding: .9rem 1rem;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -152,11 +152,29 @@ a{
   display: none;
 }
 
+.nav__logo {
+    
+  /* transform: translateX(46%) translateY(44%); Recentre l'élément par rapport à son propre centre */
+  width: 4vw;
+  height: 9vh;
+  background-color: rgba(238, 238, 238, 0); /* Utilisation de rgba avec une transparence de 40% */
+  z-index: 9999;
+}
+
+img.logo-site {
+  width: 5vw;
+  display: block;
+}
+/* a#logo-site.nav-logo {
+  width: 5vw;
+  display: block;
+} */
+
 .menu-icon {
   display: none;
 }
 
-@media (max-width:600px) {
+@media (max-width:1000px) {
 
   .navbar {
     display: none;

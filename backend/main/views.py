@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Project, Tag, Aptitude, About, Concept, MonPDF
+from .models import Project, Tag, Aptitude, About, Concept, MonPDF, SecondPdf
 from django.http import FileResponse
 
 
@@ -23,6 +23,10 @@ def contact(request):
     return render(request, "aiblog.html")
 
 
+def mentions(request):
+    return render(request, "mentions.html")
+
+
 def aptitude(request):
     aptitudes = Aptitude.objects.all()
     context = {
@@ -44,7 +48,7 @@ def project(request, id):
 
 def venue_pdf(request, id):
     # Trouvez le bon PDF en fonction de l'ID
-    pdf = MonPDF.objects.get(id=id)
+    pdf = get_object_or_404(MonPDF, id=id)
     pdf_path = pdf.pdf.path
 
     return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
@@ -52,7 +56,7 @@ def venue_pdf(request, id):
 
 def pdf_divers(request, id):
     # Trouvez le bon PDF en fonction de l'ID
-    pdf = MonPDF.objects.get(id=id)
+    pdf = get_object_or_404(SecondPdf, id=id)
     pdf_path = pdf.pdf.path
 
     return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')

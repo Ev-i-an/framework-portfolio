@@ -1,27 +1,28 @@
 {% load static %}
 
-<section class="section__about" id="about">
+<section class="section__about" id="services">
+    <h2 data-heading="Mes" class="section__title">Divers</h2>
     <ul id="categories" class="clr">
         <li class="pusher"></li>
-        {% if abouts %}
-        {% for concept in concepts %}
-            <li>
-                <div>
-                {% for image in concept.images.all %}
-                    <img src="{{ image.image.url }}" alt=""/>
+            {% if concept_object %}
+                {% for concept in concept_object %}
+                    <li>
+                        <div>
+                            {% for image in concept.images.all %}
+                                <img src="{{ image.image.url }}" alt="image d'illustration" title="illustration"/>
+                            {% endfor %}
+                            <h1>{{ concept.title }}</h1>
+                            <p>{{ concept.description }}</p>
+                            {% for pdf in concept.pdfs.all %}
+                                <a class="projet__title" href="{% url 'pdf_divers' pdf.id %}">Voir</a>
+                            {% endfor %}
+                        </div>
+                    </li>
                 {% endfor %}
-                <h1>{{ concept.title }}</h1>
-                <p>Some sample text about the article this hexagon leads to</p>
-                {% for pdf in about.pdfs.all %}
-                    <a class="projet__title" href="{% url 'pdf_divers' pdf.id %}">Voir PDF</a>
-                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>Pas d'élément divers inséré</p>
                 </div>
-            </li>
-        {% endfor %}
-        {% else %}
-            <div class="col-md-12">
-                <p>No items Available</p>
-            </div>
-        {% endif %}
+            {% endif %}
     </ul>
 </section>

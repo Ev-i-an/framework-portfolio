@@ -5,27 +5,28 @@
 {% endblock %}
 
 <section class="section__about" id="about">
+    <h2 data-heading="Mes" class="section__title">À Propos</h2>
     <ul id="categories" class="clr">
         <li class="pusher"></li>
-        {% if abouts %}
-        {% for about in abouts %}
-            <li>
-                <div>
-                {% for image in about.images.all %}
-                    <img src="{{ image.image.url }}" alt=""/>
-                {% endfor %}
-                <h1>{{ about.title }}</h1>
-                <p>{{ about.description }}</p>
-                {% for pdf in about.pdfs.all %}
-                    <a class="projet__title" href="{% url 'venue_pdf' pdf.id %}">Voir PDF</a>
-                {% endfor %}
+        {% if about_object %}
+            {% for about in about_object %}
+                <li>
+                    <div>
+                        {% for image in about.images.all %}
+                            <img src="{{ image.image.url }}" alt="image d'illustration" title="illustration"/>
+                        {% endfor %}
+                        <h1>{{ about.title }}</h1>
+                        <p>{{ about.description }}</p>
+                        {% for pdf in about.pdfs.all %}
+                            <a class="about__title" href="{% url 'venue_pdf' pdf.id %}">{{ pdf.txtlink }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+            {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>Pas d'élément à propos inséré</p>
                 </div>
-            </li>
-        {% endfor %}
-        {% else %}
-            <div class="col-md-12">
-                <p>No items Available</p>
-            </div>
-        {% endif %}
+            {% endif %}
     </ul>
 </section>

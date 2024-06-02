@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <meta name="description" content="Mon site personnel">
-    <title>{% block title %}Portfolio - Home{% endblock title %}</title>
+    <title>{% block title %}Portfolio - Evan{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <!-- <link rel="shortcut icon" href="backend/main/static/images/logo_blanc.png" type="image/x-icon"> -->
     <link rel="icon" href="{% static 'images/logo_blanc.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,35 +21,35 @@
     <header>
         <nav class="navbar">
             <span></span>
-            <!-- <div class="logo">eraf</div> -->
-            <a class="logo" href="{% static 'images/logo_blanc.png' %}"></a>
+            <div class="nav__logo">
+                <a href="http://evanmougani.fr" class="nav-logo" id="logo-site">
+                    <img src="{% static 'images/logo_blanc.png' %}" alt="logo" title="Logo" class="logo-site">
+                </a>
+            </div>
             <ul class="menu">
                 <li><a class="navigation" href="/">accueil</a></li>
-                <li><a class="navigation" href="#about">Je Moi</a></li>
-                <li><a class="navigation" href="#skills">Aptitudes</a></li>
-                <li><a class="navigation" href="#work">Projets</a></li>
-                <li><a class="navigation" href="#work">Divers</a></li>
+                <li><a class="navigation" href="/#about">À Propos</a></li>
+                <li><a class="navigation" href="/#skills">Aptitudes</a></li>
+                <li><a class="navigation" href="/#work">Projets</a></li>
+                <li><a class="navigation" href="/#services">Divers</a></li>
                 <li><a class="navigation" href="/admin">Admin</a></li>
             </ul>
-            <div class="btn">instegram</div>
         </nav>
         <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon">
         <label for="menu-icon"></label>
         <nav class="nav"> 		
             <ul class="pt-5">
                 <li><a href="/">Accueil</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#skills">Aptitudes</a></li>
-                <li><a href="#work">Projets</a></li>
-                <li><a href="#services">Divers</a></li>
+                <li><a href="/#about">À Propos</a></li>
+                <li><a href="/#skills">Aptitudes</a></li>
+                <li><a href="/#work">Projets</a></li>
+                <li><a href="/#services">Divers</a></li>
                 <li><a href="/admin">Admin</a></li>
             </ul>
         </nav> 
     </header>
     <main>
         {% include 'background.html' %}
-        {% include 'landing-page.html' %}
-        {% include 'about.html' %}
         {% block content %}
         {% endblock content %}
     </main>

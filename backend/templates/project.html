@@ -2,21 +2,21 @@
 {% load static %}
 
 {% block title %}
-  Project Page
+  Projet en détail
 {% endblock %}
 {% block extrahead %}
   <link rel="stylesheet" href="{% static 'css/projects.css' %}" />
 {% endblock %}
 
-{% block content %}
+<!-- {% block content %} -->
   <div class="project-card">
     <div class="project-info">
       <h1>{{ project.title }}</h1>
       <p>
-        <a href="{{ project.link }}">Project Link</a>
+        <a href="{{ project.link }}">Lien vers le Projet</a>
       </p>
       <p>{{ project.description }}</p>
-      <a href="{% url 'home' %}">Back to Home</a>
+      <a href="{% url 'home' %}">Retour à l'accueil</a>
     </div>
     <div class="carousel">
       <div class="carousel-images">
@@ -30,7 +30,7 @@
       <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
     </div>
   </div>
-{% endblock %}
+<!-- {% endblock %} -->
 
 {% block extra_js %}
   <script src="{% static 'js/projects.js' %}"></script>

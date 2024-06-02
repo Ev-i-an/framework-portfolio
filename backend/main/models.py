@@ -35,6 +35,7 @@ class ProjectImage(models.Model):
 
 class Concept(models.Model):
     title = models.CharField(max_length=200)
+    description = models.TextField(max_length=100, null=True)
     link = models.URLField(max_length=200, blank=True)
 
     def __str__(self):
@@ -63,7 +64,7 @@ class SecondPdf(models.Model):
 
 class About(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(max_length=100, null=True)
     link = models.URLField(max_length=200, blank=True)
 
     def __str__(self):
@@ -82,6 +83,7 @@ class MonPDF(models.Model):
     aboutpdf = models.ForeignKey(
         About, related_name="pdfs", on_delete=models.CASCADE
     )
+    txtlink = models.TextField(max_length=20, null=True)
     pdf = models.FileField(upload_to='pdfs/') 
 
     def __str__(self):

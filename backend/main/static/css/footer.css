@@ -71,5 +71,9 @@
     .footer__links {
         justify-self: flex-start;
     }
+
+    div.footer__socials {
+        transform: rotate(0deg)
+    }
     
 }

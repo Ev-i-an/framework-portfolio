@@ -65,7 +65,7 @@
     margin:0 auto;   
   }
   
-  #categories div h1, #categories div p{
+  #categories div h1, #categories div p #categories div a.about__title{
     width:90%;
     padding:0 5%;
     background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
@@ -84,7 +84,7 @@
     padding-bottom:100%;
   }
   #categories li h1:after{
-      content:'';
+    content:'';
     display:block;
     position:absolute;
     bottom:-1px; left:45%;
@@ -98,7 +98,22 @@
       top:110%;
       padding-bottom:50%;
   }
+
+  #categories li a{
+      padding-top:50%;
+      top:110%;
+      padding-bottom:50%;
+  }
   
+/* a.about__title {
+  left: 11.4vw;
+  bottom: 1vh;
+  display: none;
+}
+
+a.about__title:hover {
+  color: #fff;
+} */
   
   /* HOVER EFFECT  */
   
@@ -110,6 +125,11 @@
   #categories li div:hover p{
     top:50%;
     padding-top:10%;
+  }
+
+  #categories li div:hover a{
+    bottom:0%;
+    padding-bottom:10%;
   }
   #fork{
     position:fixed;

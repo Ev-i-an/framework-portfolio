@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-  Home Page
+Portfolio - Evan
 {% endblock %}
 {% block extrahead %}
   <link rel="stylesheet" href="{% static 'css/home.css' %}" />
@@ -11,10 +11,12 @@
 
 
 {% block content %}
+  {% include 'landing-page.html' %}
+  {% include 'about.html' %}
   {% include 'aptitude.html' %}
   <h2 data-heading="Mes" class="section__title">Projets</h2>
     <div class="filters" id="work">
-      <input type="text" id="name-search" placeholder="Search by name..." />
+      <input type="text" id="name-search" placeholder="Recherche par nom..." />
       <div class="tags-list">
         {% for tag in tags %}
           <button class="tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button>
@@ -26,13 +28,13 @@
         {% for project in projects %}
           <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
             <h3><a class="projet__title" href="{% url 'project' project.id %}">{{project.title}}</a></h3>
-            <!-- <img src="{{ project.projectimage_set.first.image.url }}" class="img-project" alt="{{ project.title }} Image"> -->
             <p>{{project.description}}</p>
             <p>Tags: {{project.tags.all|join:', '}}</p>   
           </div>
         {% endfor %}
       </div>
     </section>
+  {% include 'divers.html' %}
 {% endblock %}
 
 {% block extra_js %}
